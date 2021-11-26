@@ -1,0 +1,21 @@
+#AIM:Store roll numbers of students who attended placement training program in random
+#order in an array.
+#a) Write a program to search whether a particular student attended training or not using linear search
+
+#PROGRAM:
+def unodr_linear_search(a, b, n):
+    for i in range(n):
+        if(a[i] == b):
+            return 1
+    return 0
+
+array=[i.upper() for i in input("Enter roll numbers seperated by space : ").split()]
+b=input("Enter the roll number you want to check: ").upper()
+if unodr_linear_search(array,b,len(array)) == 1:
+    print("Student with roll number",b,"attended for Placement training")
+else: 
+    print("Student with Roll number ",b,"not attended for Placement training")
+#OUTPUT:
+#Enter roll numbers seperated by space : 19121 19122 19123
+#Enter the roll number you want to check: 19123
+#Student with roll number 19123 attended for Placement training
